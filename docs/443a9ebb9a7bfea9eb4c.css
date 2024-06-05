@@ -49,15 +49,6 @@ svg {
   }
 }
 
-@keyframes fadein {
-  0% {
-    opacity: 0
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .intro {
   background-color: #ddd;
   z-index: 2;
@@ -104,6 +95,11 @@ svg {
     background:rgba(0,0,0,0.2);
 }
 
+@keyframes fadein {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
 #wait {
     width: 180px;
     height: 80px;
@@ -114,6 +110,16 @@ svg {
     right: 0;
 
     margin: auto;
+    animation: fadein 2s ease-in-out both;
+}
+
+#wtxt {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    animation: fadein 2s ease-in-out both;
 }
 
 #atxt {
@@ -123,18 +129,6 @@ svg {
     top: 35%;
     width: 100%;
 }
-
-#klt {
-}
-
-#wtxt {
-    left: 0;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-}
-
 
 #keysright{
   position: absolute;
@@ -150,7 +144,3 @@ svg {
 }
 
 #keysright a, #keysright a:visited { text-decoration: underline; color: white; }
-
-/* #controls {
-  animation: fadein 3s ease-out 1;
-} */
